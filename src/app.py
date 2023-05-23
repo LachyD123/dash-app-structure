@@ -7,4 +7,9 @@ app.layout = html.Div([
 ])
 
 if __name__ == '__main__':
-    app.run_server()
+    app.run_server(
+            host=APP_HOST,
+            port=APP_PORT,
+            debug=APP_DEBUG,
+            dev_tools_props_check=DEV_TOOLS_PROPS_CHECK
+        )
