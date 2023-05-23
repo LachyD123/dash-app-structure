@@ -36,35 +36,6 @@ app = dash.Dash(
     title='Dash app structure'
 )
 
-server.config.update(SECRET_KEY=os.getenv('SECRET_KEY'))
-
-# Login manager object will be used to login / logout users
-login_manager = LoginManager()
-login_manager.init_app(server)
-login_manager.login_view = '/login'
-
-@login_manager.user_loader
-def load_user(username):
-    """This function loads the user by user id. Typically this looks up the user from a user database.
-    We won't be registering or looking up users in this example, since we'll just login using LDAP server.
-    So we'll simply return a User object with the passed in username.
-    """
-    return User(username)
-
-def serve_layout():
-    '''Define the layout of the application'''
-    return html.Div(
-        [
-            login_location,
-            navbar,
-            dbc.Container(
-                dash.page_container,
-                class_name='my-2'
-            ),
-            footer
-        ]
-    )
-
 
 app.layout = = html.Div([
     html.Div(children='Hello World')
