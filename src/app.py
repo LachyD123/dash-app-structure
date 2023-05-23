@@ -37,7 +37,7 @@ app = dash.Dash(
 )
 
 
-app.layout = html.Div([
+app.layout =  html.Div([
     html.Div(children='Hello World')
 ])   # set the layout to the serve_layout function
 server = app.server         # the server is needed to deploy the application
