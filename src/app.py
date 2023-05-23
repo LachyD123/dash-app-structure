@@ -1,5 +1,4 @@
 from dash import Dash, html
-from utils.settings import APP_HOST, APP_PORT, APP_DEBUG, DEV_TOOLS_PROPS_CHECK
 
 app = Dash(__name__)
 
@@ -9,8 +8,5 @@ app.layout = html.Div([
 
 if __name__ == '__main__':
     app.run_server(
-            host=APP_HOST,
-            port=APP_PORT,
-            debug=APP_DEBUG,
-            dev_tools_props_check=DEV_TOOLS_PROPS_CHECK
+
         )
